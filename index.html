@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ludo King Game Files - Crazy Games</title>
+    <link href="https://gameframe.crazygames.com/crazygames-gameframe-v1.bundle.js" rel="preload" as="script" />
+    <link href="https://www.crazygames.com/game/ludo-king" rel="canonical" />
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="The game files for Ludo King, a free browser game on CrazyGames.com" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Accept-CH" content="DPR" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui" />
+    <style id="pacman-styles">
+        /* purple background */
+        body {
+            background-image: linear-gradient(290deg, #3b2b73 55%, #6f2f93, #6f2f93);
+            background-position: center;
+            text-align: center;
+        }
+
+        /* for positioning of pacman loader */
+        body,
+        html {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes rotate_preloadpacman_half_up {
+            0% {
+                transform: rotate(270deg);
+            }
+
+            50% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(270deg);
+            }
+        }
+
+        @keyframes rotate_preloadpacman_half_down {
+            0% {
+                transform: rotate(90deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(90deg);
+            }
+        }
+
+        @keyframes preloadpacman-balls {
+            75% {
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translate(-100px, -6.25px);
+            }
+        }
+
+        .preloadpacman {
+            position: relative;
+        }
+
+        .preloadpacman>div:nth-child(2) {
+            animation: preloadpacman-balls 1s -0.99s infinite linear;
+        }
+
+        .preloadpacman>div:nth-child(3) {
+            animation: preloadpacman-balls 1s -0.66s infinite linear;
+        }
+
+        .preloadpacman>div:nth-child(4) {
+            animation: preloadpacman-balls 1s -0.33s infinite linear;
+        }
+
+        .preloadpacman>div:nth-child(5) {
+            animation: preloadpacman-balls 1s 0s infinite linear;
+        }
+
+        .preloadpacman>div:first-of-type {
+            width: 0px;
+            height: 0px;
+            border-right: 25px solid transparent;
+            border-top: 25px solid #fff;
+            border-left: 25px solid #fff;
+            border-bottom: 25px solid #fff;
+            border-radius: 25px;
+            animation: rotate_preloadpacman_half_up 0.5s 0s infinite;
+            position: relative;
+            left: -30px;
+        }
+
+        .preloadpacman>div:nth-child(2) {
+            width: 0px;
+            height: 0px;
+            border-right: 25px solid transparent;
+            border-top: 25px solid #fff;
+            border-left: 25px solid #fff;
+            border-bottom: 25px solid #fff;
+            border-radius: 25px;
+            animation: rotate_preloadpacman_half_down 0.5s 0s infinite;
+            margin-top: -50px;
+            position: relative;
+            left: -30px;
+        }
+
+        .preloadpacman>div:nth-child(3),
+        .preloadpacman>div:nth-child(4),
+        .preloadpacman>div:nth-child(5),
+        .preloadpacman>div:nth-child(6) {
+            background-color: #fff;
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            margin: 2px;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            transform: translate(0, -6.25px);
+            top: 25px;
+            left: 70px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="preloadpacman" id="pacman">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script type="text/javascript">
+        function loadScript(url, async, callback) {
+            var head = document.head;
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+            if (async) {
+                script.async = true;
+            }
+            script.onreadystatechange = callback;
+            script.onload = callback;
+            head.appendChild(script);
+        }
+        var options = {
+            "loader": "iframe",
+            "loaderOptions": {
+                "sandbox": false,
+                "url": "https://files.crazygames.com/ludo-king/1/index.html"
+            },
+            "author": "Gamotronix",
+            "thumbnail": "https://images.crazygames.com/games/ludo-king/cover-1622268936836.png?auto=format,compress&q=75&cs=strip&w=360",
+            "gameName": "Ludo King",
+            "gameHttps": true,
+            "gameSlug": "ludo-king",
+            "gameStatus": "published",
+            "showAdOnExternal": "ALWAYS",
+            "showAdOnInternal": "DEFAULT",
+            "appStoreLink": "https://itunes.apple.com/id/app/ludo-king/id993090598?mt=8",
+            "playStoreLink": "https://play.google.com/store/apps/details?id=com.ludo.king&hl=en",
+            "steamStoreLink": null,
+            "disableEmbedding": true,
+            "dollarRate": 0.8392951263810602,
+            "upvotes": 51129,
+            "downvotes": 11228,
+            "releaseDate": "2017-04-13",
+            "locale": "en_US",
+            "controls": {
+                "text": "<h3>Controls</h3><p>Left click to roll the dice and choose a piece.</p>"
+            },
+            "videoThumbnail": "https://videos.crazygames.com/ludo-king/3/ludo-king-thumbnail.mp4",
+            "video": {
+                "original": "https://videos.crazygames.com/ludo-king/3/ludo-king.mp4",
+                "sizes": [{
+                    "width": 180,
+                    "height": 111,
+                    "location": "https://videos.crazygames.com/ludo-king/3/ludo-king-180x111.mp4"
+                }, {
+                    "width": 360,
+                    "height": 222,
+                    "location": "https://videos.crazygames.com/ludo-king/3/ludo-king-360x222.mp4"
+                }, {
+                    "width": 540,
+                    "height": 333,
+                    "location": "https://videos.crazygames.com/ludo-king/3/ludo-king-540x333.mp4"
+                }, {
+                    "width": 720,
+                    "height": 444,
+                    "location": "https://videos.crazygames.com/ludo-king/3/ludo-king-720x444.mp4"
+                }]
+            },
+            "minTimeBetweenMidrollAdsInMs": 180000,
+            "minTimeBetweenRewardedAdsInMs": 5000,
+            "noMidrollAdInFirstMinutes": 3,
+            "noRewardedAdInFirstMinutes": 0,
+            "categoryEnSlug": "puzzle",
+            "tagsEnSlugs": ["2-player", "1-player", "board", "multiplayer", "html5"],
+            "fullscreen": "NOT_SUPPORTED",
+            "orientation": "PORTRAIT",
+            "category": "Board",
+            "categoryLink": "https://www.crazygames.com/t/board",
+            "gameLink": "https://www.crazygames.com/game/ludo-king",
+            "alternativeGames": [{
+                "category": "Puzzle",
+                "gameSlug": "the-royal-game-of-ur",
+                "gameName": "Royal Game of Ur",
+                "rating": 7.4,
+                "thumbnail": "https://images.crazygames.com/the-royal-game-of-ur/20210222105722/the-royal-game-of-ur-cover?auto=format,compress&q=75&cs=strip&w=360",
+                "videoThumbnail": "https://videos.crazygames.com/the-royal-game-of-ur/1/the-royal-game-of-ur-180x111.mov",
+                "gameLink": "https://www.crazygames.com/game/the-royal-game-of-ur",
+                "loader": "iframe"
+            }, {
+                "category": "Puzzle",
+                "gameSlug": "tic-tac-toe",
+                "gameName": "Tic Tac Toe Online",
+                "rating": 8.4,
+                "thumbnail": "https://images.crazygames.com/games/tic-tac-toe/thumb-1579168809142.png?auto=format,compress&q=75&cs=strip&w=360",
+                "videoThumbnail": "https://videos.crazygames.com/tic-tac-toe/1/tic-tac-toe-thumbnail.mp4",
+                "gameLink": "https://www.crazygames.com/game/tic-tac-toe",
+                "loader": "iframe"
+            }, {
+                "category": "Arcade",
+                "gameSlug": "the-epic-party",
+                "gameName": "The Epic Party",
+                "rating": 8.7,
+                "thumbnail": "https://images.crazygames.com/the-epic-party/20210520131957/the-epic-party-cover?auto=format,compress&q=75&cs=strip&w=360",
+                "videoThumbnail": "https://videos.crazygames.com/the-epic-party/1/the-epic-party-thumbnail.mp4",
+                "gameLink": "https://www.crazygames.com/game/the-epic-party",
+                "loader": "iframe"
+            }, {
+                "category": "Puzzle",
+                "gameSlug": "squarelize",
+                "gameName": "Squarelize",
+                "rating": 7.7,
+                "thumbnail": "https://images.crazygames.com/games/squarelize/thumb-1587400390453.png?auto=format,compress&q=75&cs=strip&w=360",
+                "videoThumbnail": "https://videos.crazygames.com/squarelize/1/squarelize-thumbnail.mp4",
+                "gameLink": "https://www.crazygames.com/game/squarelize",
+                "loader": "5.6.x"
+            }, {
+                "category": "Arcade",
+                "gameSlug": "classic-backgammon",
+                "gameName": "Backgammon Online",
+                "rating": 7.3,
+                "thumbnail": "https://images.crazygames.com/games/classic-backgammon/thumb-1552121461783.png?auto=format,compress&q=75&cs=strip&w=360",
+                "videoThumbnail": "https://videos.crazygames.com/classic-backgammon-1552120145061.mp4",
+                "gameLink": "https://www.crazygames.com/game/classic-backgammon",
+                "loader": "iframe"
+            }, {
+                "category": "Action",
+                "gameSlug": "stickman-supreme-duelist-2",
+                "gameName": "Stickman Supreme Duelist 2",
+                "rating": 9,
+                "thumbnail": "https://images.crazygames.com/games/stickman-supreme-duelist-2/cover-1616089810676.png?auto=format,compress&q=75&cs=strip&w=360",
+                "videoThumbnail": "https://videos.crazygames.com/stickman-supreme-duelist-2/1/stickman-supreme-duelist-2-thumbnail.mp4",
+                "gameLink": "https://www.crazygames.com/game/stickman-supreme-duelist-2",
+                "loader": "5.6.x"
+            }, {
+                "category": "Driving",
+                "gameSlug": "cyber-cars-punk-racing",
+                "gameName": "Cyber Cars Punk Racing",
+                "rating": 9.1,
+                "thumbnail": "https://images.crazygames.com/cyber-cars-punk-racing/20201130141345/cyber-cars-punk-racing-cover?auto=format,compress&q=75&cs=strip&w=360",
+                "videoThumbnail": "https://videos.crazygames.com/cyber-cars-punk-racing/1/cyber-cars-punk-racing-thumbnail.mp4",
+                "gameLink": "https://www.crazygames.com/game/cyber-cars-punk-racing",
+                "loader": "5.6.x"
+            }, {
+                "category": "Sports",
+                "gameSlug": "basketball-stars-2019",
+                "gameName": "Basketball Stars",
+                "rating": 8.5,
+                "thumbnail": "https://images.crazygames.com/games/basketball-stars-2019/cover-1583231506155.png?auto=format,compress&q=75&cs=strip&w=360",
+                "videoThumbnail": "https://videos.crazygames.com/basketball-stars-2019/1/basketball-stars-2019-thumbnail.mp4",
+                "gameLink": "https://www.crazygames.com/game/basketball-stars-2019",
+                "loader": "iframe"
+            }, {
+                "category": ".io",
+                "gameSlug": "shellshockersio",
+                "gameName": "Shell Shockers",
+                "rating": 9.2,
+                "thumbnail": "https://images.crazygames.com/shellshockersio/20200825110135/shellshockersio-cover?auto=format,compress&q=75&cs=strip&w=360",
+                "videoThumbnail": "https://videos.crazygames.com/shellshockersio/2/shellshockersio-180x111.mp4",
+                "gameLink": "https://www.crazygames.com/game/shellshockersio",
+                "loader": "iframe"
+            }, {
+                "category": "Sports",
+                "gameSlug": "soccer-masters-euro-2020",
+                "gameName": "Soccer Masters: Euro 2020",
+                "rating": 8.5,
+                "thumbnail": "https://images.crazygames.com/games/soccer-masters-euro-2020/cover-1575559557992.png?auto=format,compress&q=75&cs=strip&w=360",
+                "videoThumbnail": "https://videos.crazygames.com/soccer-masters-euro-2020/1/soccer-masters-euro-2020-thumbnail.mp4",
+                "gameLink": "https://www.crazygames.com/game/soccer-masters-euro-2020",
+                "loader": "iframe"
+            }],
+            "country": "AR",
+            "domainHasNoCMP": false
+        };
+        var SDK_READY = false;
+        var GF_READY = false;
+        var GF_LOAD_CALLED = false;
+        loadScript("https://gameframe.crazygames.com/crazygames-gameframe-v1.bundle.js", true, function() {
+            Crazygames.load(options).then(function() {
+                var pacmanWrapper = document.getElementById('pacman');
+                var pacmanStyles = document.getElementById('pacman-styles');
+
+                if (pacmanWrapper && pacmanStyles) {
+                    pacmanWrapper.remove();
+                    pacmanStyles.remove();
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
